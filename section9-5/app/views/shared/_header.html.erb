@@ -1,0 +1,30 @@
+<%= image_tag("logo.gif", size: "272x48", alt: "Morning Glory") %>
+
+<% if current_member %>
+<p class="member">
+<%= link_to current_member.name + "さん", :account %> |
+<%= link_to "ログアウト", :session,
+      method: :delete, data: { confirm: "ログアウトしますか？" } %>
+</p>
+<% end %>
+
+<% if controller.kind_of?(Admin::Base) %>
+<div class="menubar" id="admin_menubar">
+<%= menu_link_to "管理TOP", :admin_root %>
+&nbsp;|&nbsp; <%= menu_link_to "会員管理", :admin_members %>
+&nbsp;|&nbsp; <%= menu_link_to "記事管理", :admin_articles %>
+&nbsp;|&nbsp; <%= menu_link_to "TOP", :root %>
+</div>
+<% else %>
+<div class="menubar">
+<%= menu_link_to "TOP", root_path %>
+&nbsp;|&nbsp; <%= menu_link_to "ニュース", :articles %>
+&nbsp;|&nbsp; <%= menu_link_to "ブログ", :entries %>
+<% if current_member %>
+&nbsp;|&nbsp; <%= menu_link_to "会員名簿", :members %>
+<% if current_member.administrator? %>
+&nbsp;|&nbsp; <%= menu_link_to "管理ページ", :admin_root %>
+<% end %>
+<% end %>
+</div>
+<% end %>

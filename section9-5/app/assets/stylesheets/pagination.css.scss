@@ -1,0 +1,13 @@
+/* ページネーション */
+div.pagination {
+  font-size: 75%;
+  padding: 4px 8px;
+  border: 1px solid #499;
+  word-spacing: 4px;
+
+  em { font-style: normal; }
+  em.current {
+    color: #499;
+    font-weight: bold;
+  }
+}

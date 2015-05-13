@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= page_title %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <%= render "shared/header" %>
+    </div>
+    <div id="content">
+      <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <%= render "shared/sidebar" %>
+    </div>
+    <div id="footer">
+      <%= render "shared/footer" %>
+    </div>
+  </div>
+</body>
+</html>

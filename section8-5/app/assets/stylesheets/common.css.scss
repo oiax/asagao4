@@ -1,0 +1,121 @@
+$container_width: 780px;
+$sidebar_width: 230px;
+
+/* 全体の枠 */
+div#container {
+  margin: 0 auto;
+  padding-top: 5px;
+  width: $container_width;
+}
+
+/* 左の枠（コンテンツを入れる） */
+div#content {
+  float: left;
+  width: $container_width - $sidebar_width - 20px;
+  padding: 10px 10px 10px 0;
+}
+
+/* 右の枠（サイドバーを入れる） */
+div#sidebar {
+  float: left;
+  width: $sidebar_width;
+  background-color: #e8ffff;
+  padding: 5px;
+  font-size: 86%;
+}
+
+/* ヘッダー */
+div#header {
+  border-top: 4px solid #6bb;
+
+  p.member {
+    width: 200px;
+    float: right;
+    font-size: 80%;
+    text-align: right;
+    padding-top: 6px;
+  }
+}
+
+/* フッター */
+div#footer {
+  clear: both;
+  font: 11px Verdana;
+  color: #888;
+  padding: 8px 0;
+  border-top: 4px solid #6bb;
+  text-align: center;
+}
+
+/* メニューバー */
+div.menubar {
+  padding: 2px;
+  background-color: #000;
+  color: #ccc;
+  font-size: 80%;
+  padding: 8px 16px;
+
+  a { text-decoration: none; }
+  a:link { color: #ccc; }
+  a:visited { color: #ccc; }
+  a:hover {
+    color: #f88;
+    text-decoration: underline;
+  }
+  span {
+    color: #ff8;
+    font-weight: bold;
+  }
+}
+
+div#admin_menubar {
+  background-color: #008;
+}
+
+/* メインコンテンツ */
+div#content {
+  h1 {
+    color: #88c;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 2px solid #88c;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    color: #99d;
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #ccf;
+  }
+  p, ul {
+    font-size: 90%;
+    line-height: 1.5;
+  }
+}
+
+/* サイドバー */
+div#sidebar {
+  h2 {
+    color: #080;
+    font-weight: bold;
+    border-bottom: 1px dotted #080;
+    margin-bottom: 0.5em;
+    font-size: 100%;
+  }
+  ul {
+    padding-left: 1em;
+    list-style-type: none;
+  }
+  li {
+    margin-bottom: 0.3em;
+  }
+  table#login_form {
+    td { font-size: 12px; }
+  }
+  p.alert {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
