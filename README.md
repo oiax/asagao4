@@ -1,14 +1,16 @@
 # 『改訂3版 基礎Ruby on Rails』サンプルソース
 
-『改訂3版 基礎Ruby on Rails』のサンプルソースです。
+『改訂3版 基礎Ruby on Rails』（2015年5月、インプレス刊）のサンプルソースです。
 
 書籍情報：http://book.impress.co.jp/books/1114101096<br />
 Amazon：http://www.amazon.co.jp/dp/4844338153/
 
-## 動作環境
+読者サポートページ：http://www.oiax.jp/rails4book
 
-Ruby 2.2.1、Ruby on Rails 4.2.1<br />
-Windowsでは、Ruby 2.1.6をお使いください。
+## 動作確認環境
+
+Ruby 2.2.1または2.2.2、Ruby on Rails 4.2.1<br />
+Windowsでは、Ruby 2.1.5または2.1.6をお使いください。
 
 ## 使い方
 
@@ -52,7 +54,6 @@ mac:chapter4 taro% bin/rails s
 Windowsでは、`bundle`コマンドを実行する前に、DevKitとSSL証明書の設定を行ってください（本書23-24ページを参照）。
 
 ````
-C:¥Users¥taro> cd ¥asagao4¥chapter4
 C:¥asagao4¥chapter4> C:¥devkit¥devkitvars
 C:¥asagao4¥chapter4> set SSL_CERT_FILE=C:¥Users¥taro¥cacert.pem
 C:¥asagao4¥chapter4> bundle install
