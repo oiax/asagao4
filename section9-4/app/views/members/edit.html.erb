@@ -4,7 +4,7 @@
 
 <p><%= link_to "会員の詳細に戻る", @member %></p>
 
-<%= form_for @member, html: { multipart: true } do |form| %>
+<%= form_for @member do |form| %>
 <%= render "form", form: form %>
 <p><%= form.submit %></p>
 <% end %>
