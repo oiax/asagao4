@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit(:title, :body,
-      :released_at, :expired_at, :member_only)
+      :released_at, :no_expiration, :expired_at, :member_only)
   end
 end
